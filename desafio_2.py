@@ -3,6 +3,7 @@ import textwrap
 def menu():
     menu = """
 
+    =================MENU=================
     [d] \tDepositar
     [s] \tSacar
     [e] \tExtrato
@@ -90,6 +91,8 @@ def sacar(*,saldo, valor, extrato, numero_saques, limite, limite_saques): #FUNÇ
     else:
         print("Operação falhou! O valor informado é inválido.")
 
+    return saldo, extrato
+
 def exibir_extrato(saldo, /, *, extrato): #FUNÇÃO EXTRATO
     
     print("\n================ EXTRATO ================")
@@ -100,7 +103,7 @@ def exibir_extrato(saldo, /, *, extrato): #FUNÇÃO EXTRATO
 def main():
     
     LIMITE_SAQUES = 3
-    AGENCIA: "0001"
+    AGENCIA= "0001"
 
     saldo = 0
     limite = 500
